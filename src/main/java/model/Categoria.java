@@ -1,4 +1,12 @@
 package model;
 
-public enum TipoCategoria {
+public enum Categoria {
+    ALIMENTACAO,
+    TRANSPORTE,
+    MORADIA,
+    SALARIO,
+    SAUDE,
+    EDUCACAO,
+    LAZER,
+    OUTROS
 }
