@@ -11,7 +11,7 @@ public class Transacao {
     private Categoria categoria;
     private TipoTransacao tipo;
 
-    public Transacao(String descricao, LocalDate data, BigDecimal valor, Categoria categoria, TipoTransacao tipo) {
+    public Transacao(String descricao, BigDecimal valor, LocalDate data, TipoTransacao tipo, Categoria categoria) {
         if (valor.compareTo(BigDecimal.ZERO) <= 0) {
             throw new IllegalArgumentException("O valor deve ser maior que zero.");
         }
@@ -42,5 +42,10 @@ public class Transacao {
     public Categoria getCategoria() {
         return categoria;
     }
+    @Override
+    public String toString() {
+        return data + " | " + tipo + " | " + categoria + " | " + descricao + " | R$" + valor;
+    }
+
 
 }
