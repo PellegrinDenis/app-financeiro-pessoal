@@ -3,6 +3,7 @@ package app;
 import model.Categoria;
 import model.TipoTransacao;
 import model.Transacao;
+import repository.ConexaoBanco;
 import service.TransacaoService;
 
 import java.math.BigDecimal;
@@ -11,6 +12,10 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
+
+        ConexaoBanco.criarTabelas();
+        System.out.println("Banco pronto!");
+
         Transacao salario = new Transacao(
                 "Salário de Setembro",
                 new BigDecimal("2500.00"),
