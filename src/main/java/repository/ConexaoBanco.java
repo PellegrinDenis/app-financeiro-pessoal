@@ -27,7 +27,7 @@ public class ConexaoBanco {
         try (Connection conn = conectar();
              Statement stmt = conn.createStatement()) {
             stmt.execute(sql);
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException("Erro ao criar as tabelas", e);
         }
     }
